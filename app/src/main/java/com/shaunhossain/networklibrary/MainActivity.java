@@ -17,6 +17,6 @@ public class MainActivity extends AppCompatActivity {
     }
     private void test(){
 
-        //bal cal
+        //bal cal cole na
     }
 }
