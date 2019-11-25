@@ -19,4 +19,9 @@ public class MainActivity extends AppCompatActivity {
 
         //bal cal cole na
     }
+
+    private void test_bal() {
+
+
+    }
 }
