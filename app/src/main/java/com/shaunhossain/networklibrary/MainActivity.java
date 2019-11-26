@@ -15,13 +15,5 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
-    private void test(){
-
-        //bal cal cole na
-    }
-
-    private void test_bal() {
-
-
-    }
+   
 }
