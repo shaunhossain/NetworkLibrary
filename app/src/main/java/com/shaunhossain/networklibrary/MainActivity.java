@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 List<User> users = response.body();
 
                 for (User h : users) {
-                    Log.d("UserID", h.getUserId());
-                    Log.d("ID", h.getId());
-                    Log.d("Title", h.getTitle());
-                    Log.d("Completed", h.getCompleted());
+                    Log.d("UserID", h.getName());
+                    Log.d("ID", h.getRealname());
+                    Log.d("Title", h.getFirstappearance());
+                    Log.d("Completed", h.getBio());
 
                 }
 
@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<User>> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.d("erro", t.getMessage());
             }
         });
 
