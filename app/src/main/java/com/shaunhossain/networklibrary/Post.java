@@ -1,0 +1,49 @@
+package com.shaunhossain.networklibrary;
+
+public class Post {
+
+
+    private Integer userId;
+    private Integer Id;
+    private String title;
+    private String body;
+
+    public Post(Integer userId, Integer id, String title, String body) {
+        this.userId = userId;
+        Id = id;
+        this.title = title;
+        this.body = body;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public Integer getId() {
+        return Id;
+    }
+
+    public void setId(Integer id) {
+        Id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+}

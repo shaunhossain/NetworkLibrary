@@ -30,26 +30,30 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         NetworkService service = retrofit.create(NetworkService.class);
-        Call<List<User>> call = service.getUserInfo();
+        Call<List<Post>> call = service.post();
 
-        call.enqueue(new Callback<List<User>>() {
+        call.enqueue(new Callback<List<Post>>() {
             @Override
-            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+            public void onResponse(Call<List<Post>> call, Response<List<Post>> response) {
 
-                List<User> users = response.body();
+                List<Post> posts = response.body();
 
-                for (User h : users) {
-                    Log.d("UserID", h.getName());
-                    Log.d("ID", h.getRealname());
-                    Log.d("Title", h.getFirstappearance());
-                    Log.d("Completed", h.getBio());
+
+                //Toast.makeText(MainActivity.this, (CharSequence) posts,Toast.LENGTH_LONG).show();
+
+                for (Post h : posts) {
+                    Log.d("UserID", String.valueOf(h.getUserId()));
+                    Log.d("ID", String.valueOf(h.getId()));
+                    Log.d("Title", h.getTitle());
+                    Log.d("Completed", h.getBody());
 
                 }
+
 
             }
 
             @Override
-            public void onFailure(Call<List<User>> call, Throwable t) {
+            public void onFailure(Call<List<Post>> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
                 Log.d("erro", t.getMessage());
             }
